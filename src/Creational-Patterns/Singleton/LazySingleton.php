@@ -2,7 +2,7 @@
 
 namespace CreationalPattern\Singleton;
 
-class Singleton
+class LazySingleton
 {
     private static $instance;
 
@@ -13,9 +13,9 @@ class Singleton
         throw new \Exception("Cannot unserialize a singleton.");
     }
 
-    public static function getInstance(): Singleton
+    public static function getInstance(): LazySingleton
     {
-        if (self::$instance == null) {
+        if (self::$instance instanceof self) {
             self::$instance = new self();
         }
 

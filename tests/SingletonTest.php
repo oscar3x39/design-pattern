@@ -1,14 +1,14 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use CreationalPattern\Singleton\Singleton;
+use CreationalPattern\Singleton\LazySingleton;
 
 class SingletonTest extends TestCase
 {
-    public function testCreateSingletonInstance()
+    public function testLazySingleton()
     {
-        $instance1 = Singleton::getInstance();
-        $instance2 = Singleton::getInstance();
+        $instance1 = LazySingleton::getInstance();
+        $instance2 = LazySingleton::getInstance();
         $this->assertEquals($instance1, $instance2);
     }
 }
