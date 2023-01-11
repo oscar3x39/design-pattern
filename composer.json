@@ -12,7 +12,7 @@
     "scripts": {
         "test": [
             "composer dump-autoload",
-            "./vendor/bin/phpunit ./tests/"
+            "./vendor/bin/phpunit ./tests"
         ]
     }
 }

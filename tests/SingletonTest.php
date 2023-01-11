@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use CreationalPattern\Singleton\LazySingleton;
+use CreationalPattern\LazySingleton;
 
 class SingletonTest extends TestCase
 {

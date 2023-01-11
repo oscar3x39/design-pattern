@@ -1,6 +1,6 @@
 <?php
 
-namespace CreationalPattern\Singleton;
+namespace CreationalPattern;
 
 class LazySingleton
 {
@@ -13,7 +13,7 @@ class LazySingleton
         throw new \Exception("Cannot unserialize a singleton.");
     }
 
-    public static function getInstance(): LazySingleton
+    public static function getInstance()
     {
         if (self::$instance instanceof self) {
             self::$instance = new self();
