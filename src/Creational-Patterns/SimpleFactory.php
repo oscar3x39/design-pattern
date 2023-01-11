@@ -1,6 +1,6 @@
 <?php
 
-namespace CreationalPattern;
+namespace CreationalPattern\SimpleFactory;
 
 interface IFood
 {
@@ -33,8 +33,7 @@ class Mcdonlad
             case "mcChicken":
                 return new McChicken();
             default:
-                echo "we're not support this food";
-                return null;
+                throw new \Exception("we're not support this food");
         }
     }
 }

@@ -1,8 +1,8 @@
 <?php
 
-namespace CreationalPattern;
+namespace CreationalPattern\Singleton;
 
-class LazySingleton
+class Singleton
 {
     private static $instance;
 

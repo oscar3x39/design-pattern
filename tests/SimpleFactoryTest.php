@@ -1,9 +1,9 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use CreationalPattern\Mcdonlad;
-use CreationalPattern\Chips;
-use CreationalPattern\McChicken;
+use CreationalPattern\SimpleFactory\Mcdonlad;
+use CreationalPattern\SimpleFactory\Chips;
+use CreationalPattern\SimpleFactory\McChicken;
 
 class SimpleFactoryTest extends TestCase
 {
@@ -17,7 +17,8 @@ class SimpleFactoryTest extends TestCase
         $mcChicken = $mcdonlad->getFood("mcChicken");
         $this->assertInstanceOf(McChicken::class, $mcChicken);
 
+        $this->expectException(\Exception::class);
+        $this->expectExceptionMessage('we\'re not support this food');
         $kfcChicken = $mcdonlad->getFood("kfcChicken");
-        $this->assertEquals($kfcChicken, null);
     }
 }
